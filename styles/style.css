@@ -1,89 +1,110 @@
 :root {
-  --primary: #dbdbdb;
-  --background: #07031a;
+	--primary: #dbdbdb;
+	--secondary: #07031a;
 }
 
 body {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
 
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-
-  background-color: var(--background);
+	background-color: var(--secondary);
 }
 
 .overlay {
-  position: absolute;
-  z-index: 1;
+	position: absolute;
+	z-index: 1000;
 
-  color: var(--primary);
+	color: var(--primary);
 }
 
 .btn {
-  font-family: 'Material Icons';
-  font-size: 60px;
-  cursor: pointer;
+	font-family: 'Material Icons';
+	font-size: 60px;
+	cursor: pointer;
 
-  text-shadow: 4px 6px var(--background);
+	text-shadow: 4px 6px var(--secondary);
 }
 
-.btn.prev { left: 40px; }
-.btn.next { right: 40px; }
+.btn#prev {
+	left: 40px;
+}
+.btn#next {
+	right: 40px;
+}
 
 .navigation {
-  left: 0;
-  bottom: 30px;
-  width: 100%;
+	left: 0;
+	bottom: 30px;
+	width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav-item {
-  width: 15px;
-  height: 15px;
-  margin: 10px;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
 
-  border: 2px solid var(--primary);
-  opacity: 50%;
-  border-radius: 50%;
+	border: 2px solid var(--primary);
+	opacity: 50%;
+	border-radius: 50%;
 
-  cursor: pointer;
+	cursor: pointer;
+
+	transition: opacity 1s;
 }
 
 .nav-item.active {
-  background-color: var(--primary);
+	background-color: var(--primary);
+	opacity: 1;
 }
 
 .nav-item:hover {
-  transition: opacity 300ms;
-  opacity: 1;
+	transition: opacity 300ms ease-in;
+	opacity: 1;
 }
 
+.display {
+	position: absolute;
+	top: 0;
+	left: 0;
 
-
-.img {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
+.display.flash {
+	animation: opac 1.5s;
+}
 
-.img img {
-  width: inherit;
-  height: 100%;
+@keyframes opac {
+	0% {
+		opacity: 0.3;
+	}
 
-  object-fit: cover;
+	100% {
+		opacity: 1;
+	}
+}
+
+.display img {
+	width: inherit;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+.hidden {
+	display: none;
 }

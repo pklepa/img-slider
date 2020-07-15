@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>my image slider</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATS</title>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
 
+  <body>
+    <div class="container">
+      <p class="overlay btn" id="prev">keyboard_arrow_left</p>
+      <p class="overlay btn" id="next">keyboard_arrow_right</p>
 
-<body>
-  <div class="container">
-    <p class="overlay btn prev">keyboard_arrow_left</p>
-    <p class="overlay btn next">keyboard_arrow_right</p>
+      <div class="display flash">
 
-    <div class="img">
-      <img src="./assets/rat6.jpg" alt="Hangin' there">
+        <img class="" src="./assets/rat1.jpg" alt="Rat1">
+        <img class="hidden" src="./assets/rat2.jpg" alt="Rat2">
+        <img class="hidden" src="./assets/rat3.jpg" alt="Rat3">
+        <img class="hidden" src="./assets/rat4.jpg" alt="Rat4">
+        <img class="hidden" src="./assets/rat5.jpg" alt="Rat5">
+        <img class="hidden" src="./assets/rat6.jpg" alt="Rat6">
+
+      </div>
+
+      <div class="overlay navigation">
+        <div class="nav-item active"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+      </div>
     </div>
 
-    <div class="overlay navigation">
-      <div class="nav-item"></div>
-      <div class="nav-item"></div>
-      <div class="nav-item"></div>
-      <div class="nav-item"></div>
-      <div class="nav-item"></div>
-      <div class="nav-item active"></div>
-    </div>
-  </div>
-
-  
-</body>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

@@ -17,6 +17,57 @@ body {
   background-color: var(--background);
 }
 
+.overlay {
+  position: absolute;
+  z-index: 1;
+
+  color: var(--primary);
+}
+
+.btn {
+  font-family: 'Material Icons';
+  font-size: 60px;
+  cursor: pointer;
+
+  text-shadow: 4px 6px var(--background);
+}
+
+.btn.prev { left: 40px; }
+.btn.next { right: 40px; }
+
+.navigation {
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+
+  border: 2px solid var(--primary);
+  opacity: 50%;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: var(--primary);
+}
+
+.nav-item:hover {
+  transition: opacity 300ms;
+  opacity: 1;
+}
+
+
+
 .img {
   position: absolute;
   top: 0;

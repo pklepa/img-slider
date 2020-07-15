@@ -15,6 +15,10 @@ prev.addEventListener('click', previousImg);
 
 let timer = setInterval(nextImg, 6000);
 
+window.addEventListener('keydown', (e) => {
+	e.code == 'ArrowLeft' ? previousImg() : nextImg();
+});
+
 function nextImg() {
 	let nextImg;
 	if (currentImg < imgs.length - 1) {
